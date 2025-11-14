@@ -76,6 +76,13 @@ particlesJS(
 
 const data = [
   {
+    title: "Orquestrador",
+    image: "./imgs/Orquestrador.png",
+    description:
+      "Sistema orquestrador que implementa com outro sistema de conexão de transmissões ao vivo da empresa Lamtech para servir como gerenciador das transmissões e ter uma visão geral pelo dashboard.",
+    video: "./videos/Orquestrador.mp4",
+  },
+  {
     title: "APAE - Bem Estar Gestão",
     image: "./imgs/APAE.png",
     description:
