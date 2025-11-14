@@ -3,7 +3,7 @@ function mostrarDetalhes(element) {
   const imageSrc = element.querySelector("img").src;
   const description = element.dataset.description;
   let techs = element.dataset.techs;
-  techs = techs.split(",").map(item => item.trim());
+  techs = techs.split(",").map((item) => item.trim());
 
   const videoSrc = element.dataset.video;
 
@@ -12,12 +12,12 @@ function mostrarDetalhes(element) {
   modal.querySelector("p").innerText = description;
   const techsDiv = document.getElementById("techs");
   techsDiv.innerHTML = "";
-  techs.forEach(tech => {
+  techs.forEach((tech) => {
     const option = document.createElement("div");
     option.innerText = tech;
     option.setAttribute("id", "tech");
     techsDiv.appendChild(option);
-  })
+  });
   modal.querySelector("video source").src = videoSrc;
   modal.querySelector("video").load();
 
@@ -90,8 +90,9 @@ const data = [
     title: "Orquestrador",
     image: "./imgs/Orquestrador.png",
     description:
-      "Sistema orquestrador que implementa com outro sistema de conexão de transmissões ao vivo da empresa Lamtech para servir como gerenciador das transmissões e ter uma visão geral pelo dashboard.",
+      "Sistema completo de gerenciamento e orquestração de transmissões de vídeo em tempo real, desenvolvido para automatizar e visualizar conexões entre dispositivos encoders e decoders em múltiplos gateways distribuídos geograficamente para a empresa LAM TECH.",
     video: "./videos/Orquestrador.mp4",
+    tech: ["React", "Node", "Docker", "MYSQL", "API", "MVC", "Autenticação JWT"],
   },
   {
     title: "APAE - Bem Estar Gestão",
@@ -99,25 +100,14 @@ const data = [
     description:
       "Sistema de gestão de nutricionismo e controle de compras e despesas para a APAE de Presidente Prudente.",
     video: "./videos/APAE.mp4",
-    tech: [
-      "PHP",
-      "HTML",
-      "CSS",
-      "MySQL",
-      "JS Puro"
-    ]
+    tech: ["PHP", "HTML", "CSS", "MySQL", "JS Puro"],
   },
   {
     title: "Jogo Volei 3D",
     image: "./imgs/Volei3D.png",
     description: "Jogo de volei 3D feito com Unity, com multiplayer online.",
     video: "./videos/Jogo_Volei.mp4",
-    tech: [
-      "C#",
-      "Mirror",
-      "Network",
-      "Unity"
-    ]
+    tech: ["C#", "Mirror", "Network", "Unity"],
   },
   {
     title: "Sorteador/Twitch",
@@ -125,12 +115,7 @@ const data = [
     description:
       "Site para sorteio de nomes, feito para ser usado em lives da Twitch. Com controle de viewers VIPs",
     video: "./videos/Sorteador.mp4",
-    tech: [
-      "Next",
-      "Node",
-      "API-Twitch",
-      "Electron"
-    ]
+    tech: ["Next", "Node", "API-Twitch", "Electron"],
   },
   {
     title: "Ensino Estrutura De Dados",
@@ -138,23 +123,14 @@ const data = [
     description:
       "Site para ensino de estrutura de dados, com aulas, exercícios e correções automáticas. Como também gamificação com trilhas e customização de personageem",
     video: "./videos/Ensino.mp4",
-    tech: [
-      "Estrutura De Dados",
-      "PHP",
-      "HTML",
-      "CSS",
-      "MySQL"
-    ]
+    tech: ["Estrutura De Dados", "PHP", "HTML", "CSS", "MySQL"],
   },
   {
     title: "Campo Minado",
     image: "./imgs/Campo-Minado.png",
     description: "Jogo de campo minado feito com React para aprender a usa-la.",
     video: "./videos/Campo-Minado.mp4",
-    tech: [
-      "React",
-      "CSS"
-    ]
+    tech: ["React", "CSS"],
   },
 ];
 
